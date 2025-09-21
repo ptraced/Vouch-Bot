@@ -1,0 +1,34 @@
+# ===========================================================================
+# Vouch Bot Configuration
+# ===========================================================================
+
+# Bot Configuration
+botToken: "YOUR_BOT_TOKEN_HERE" # Your Discord bot token
+clientId: "YOUR_CLIENT_ID_HERE" # Your Discord application/client ID
+guildId: "YOUR_GUILD_ID_HERE" # Your Discord server ID (optional, for guild-specific commands)
+
+# Bot Status (optional)
+botStatus:
+  activity: "Managing vouches" # Activity text
+  type: 3 # Activity type: 0 = Playing, 1 = Streaming, 2 = Listening, 3 = Watching, 5 = Competing
+
+vouchChannelId: "CHANNEL_ID_HERE" # The channel all vouches should be sent to
+
+# Config option to control whether users are allowed to vouch for specific individuals.
+# If set to 'true', users can vouch for a specific user using the /vouch command.
+# If set to 'false', users can only vouch for the business as a whole.
+allowUserSpecificVouch: true
+
+uploadImage: false # Set to true to require users to upload proof/image that will be displayed in the vouch embed
+
+requiredRoles: ["ROLE_ID_1", "ROLE_ID_2"] # Only users with these roles can use the vouch command, You can add multiple
+
+customization:
+  embedColor: "#5e99ff"
+  vouchTitle: "🎉 Vouch (#${count})"
+  vouchFooterText: "Vouched by ${authorTag}"
+  userFieldTitle: "Vouched User"
+  vouchedByFieldTitle: "Vouched By"
+  vouchedAtFieldTitle: "Vouched at"
+  starsFieldTitle: "Stars"
+  messageDescription: "${messageContent}"

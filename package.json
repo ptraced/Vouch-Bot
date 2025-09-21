@@ -1,0 +1,32 @@
+{
+  "name": "vouch-bot",
+  "version": "1.0.0",
+  "description": "A Discord bot for managing user vouches and reviews",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "vouch",
+    "reviews",
+    "rating"
+  ],
+  "author": "ptraced",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "discord.js": "^14.22.1",
+    "@discordjs/builders": "^1.11.3",
+    "@discordjs/rest": "^2.6.0",
+    "discord-api-types": "^0.38.26",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=22.14.0"
+  }
+}
