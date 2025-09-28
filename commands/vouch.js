@@ -58,11 +58,11 @@ if (config.allowUserSpecificVouch) {
             .setRequired(true));
 }
 
-if (config.uploadImage) {
+if (config.uploadImage === true || config.uploadImage === "optional") {
 commandData.addAttachmentOption(option =>
     option.setName('attachment')
         .setDescription('Attach an image/proof that will be displayed in the vouch message')
-        .setRequired(config.uploadImage));
+        .setRequired(config.uploadImage === true));
 }
 
 module.exports = {
@@ -126,7 +126,7 @@ module.exports = {
         }
 
         // If image upload is enabled and an attachment is present, add it to the embed
-        if (config.uploadImage && attachment && attachment.contentType.startsWith('image')) {
+        if ((config.uploadImage === true || config.uploadImage === "optional") && attachment && attachment.contentType.startsWith('image')) {
             vouchEmbed.setImage(attachment.url);
         }
 

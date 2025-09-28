@@ -20,6 +20,7 @@ vouchChannelId: "CHANNEL_ID_HERE" # The channel all vouches should be sent to
 allowUserSpecificVouch: true
 
 uploadImage: false # Set to true to require users to upload proof/image that will be displayed in the vouch embed
+# Options: false (disabled), true (required), "optional" (optional)
 
 requiredRoles: ["ROLE_ID_1", "ROLE_ID_2"] # Only users with these roles can use the vouch command, You can add multiple
 
